@@ -1,0 +1,271 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 155, 0.3), rgba(255, 255, 0, 0.2)),
+  url("../images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  color: whitesmoke;
+  letter-spacing: 1px;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-position:fixed;
+  background-repeat: no-repeat;
+  padding: 2.2rem 2rem;
+  border-radius: 10px;
+  width: 28rem;
+  margin-top: 6rem;
+}
+
+hr {
+  border-color: rgb(43, 37, 46);
+  border-width: 2px;
+  opacity: 0.6;
+}
+
+header {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+}
+
+#dp {
+  width: 52px;
+  margin-left: 1rem;
+  border-radius: 12px;
+}
+
+.heading {
+  font-size: 2.2rem;
+  margin: 0;
+  display: inline;
+  margin-left: 15px;
+  text-decoration: underline;
+}
+
+#user-info p {
+  margin: 10px 0 5px 5px;
+  font-size: 17px;
+}
+
+.save-btn {
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  background-color: #a52a2ac4;
+  border-width: 0px;
+  color: white;
+  height: 26px;
+  width: 56px;
+  box-shadow: 0px 0px 2px 0px white;
+  cursor: pointer;
+  outline: none;
+}
+
+#todo-info {
+  display: inline-flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#todo-info h4 {
+  margin: 2px 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#todos-section {
+  font-size: 24px;
+  color: #e8e1dc;
+  margin-top: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 5px;
+  margin: 5px 0 12px 0;
+}
+
+li {
+  margin-left: 3px;
+  overflow-wrap: break-word;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: start;
+}
+
+.delete-img {
+  width: 24px;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+
+input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  margin: 5px 12px;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+input[type=checkbox]:checked+li {
+  text-decoration: line-through;
+  color: tomato;
+  opacity: 0.6;
+}
+
+.input-box {
+  width: 80%;
+  height: 2rem;
+  border-width: 0;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 2.6px 40px 1.4px 12px;
+  color: #841717;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.input-btn-section {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.add-btn {
+  border-width: 0;
+  border-radius: 50%;
+  outline: none;
+  position: absolute;
+  cursor: pointer;
+  background-color: #23010100;
+  right: 15px;
+  bottom: -1px;
+  font-size: 0;
+}
+
+#plus-sign {
+  width: 37px;
+}
+
+@media (max-width:550px) {
+  .container {
+    width: 75%;
+  }
+
+  #dp {
+    width: 43px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  #user-info p {
+    font-size: 12px;
+  }
+
+  #todo-info h4 {
+    font-size: 15px;
+  }
+
+  .save-btn {
+    font-size: 13px;
+    height: 22px;
+    width: 47px;
+  }
+
+  #todos-section {
+    font-size: 20px;
+  }
+
+  .delete-img {
+    width: 20px;
+  }
+
+  input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    margin: 3px 12px;
+  }
+
+  .input-box {
+    width: 100%;
+    font-size: 15px;
+    padding: 1px 0px 1px 10px;
+    height: 30px;
+  }
+
+  .input-btn-section {
+    margin: unset;
+    width: 85%;
+  }
+
+  .add-btn {
+    right: 0;
+    right: -24px;
+    bottom: -1px;
+  }
+
+  #plus-sign {
+    width: 32px;
+  }
+}
+
+.hide {
+  display: none;
+  transition: 1s;
+}
+
+.enter {
+  font-size: 0px;
+  margin: 15px 8px;
+}
+
+.enter input {
+  margin: 5px 0;
+  font-size: 15px;
+  border-width: 0;
+  border-radius: 5px 0 0 5px;
+  height: 25px;
+  padding: 3.5px 8px;
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: brown;
+}
+
+.enter button {
+  font-size: 16px;
+  font-family: inherit;
+  height: 32px;
+  width: 58px;
+  border-width: 0;
+  border-radius: 0px 5px 5px 0px;
+  color: white;
+  background-color: rgb(35, 144, 218);
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+.home-section li {
+  margin: 11px 0;
+}
