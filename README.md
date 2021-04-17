@@ -17,7 +17,7 @@ Tech Stack Used:
 
 - [Visit From Here](https://domytodo.herokuapp.com/)
 
--Enter Your Username
+- Enter Your Username
 
 ![home](public/images/1.JPG)
 
