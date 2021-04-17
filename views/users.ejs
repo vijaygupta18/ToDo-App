@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favi.ico">
+  <link rel="stylesheet" href="../css/index.css" />
+  <title>Todo App</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img id="dp" src="../images/dp.png" alt="">
+      <h1 class="heading">TODO Reminder</h1>
+    </header>
+
+    <hr>
+    <section id="user-info">
+      <p>Hey <strong><%=User%></strong>! Welcome to ToDo-App</p>
+    </section>
+    <hr>
+
+    <section id="todo-info">
+      <div class="calc">
+        <h4>Total Todos: <span id="total">4</span></h4>
+        <h4>Completed: <span id="completed">4</span></h4>
+        <h4>Uncomplete: <span id="uncomplete">4</span></h4>
+      </div>
+      <form class="" action="/user/<%=User%>" method="post">
+        <button class="save-btn" type="submit" name="saveBtn">SAVE</button>
+
+    </section>
+    <hr>
+
+    <section id="todos-section">
+      <form class="" action="/user/<%=User%>" method="post">
+        <ul>
+          <% for(let todo of todos){     %>
+          <div class="">
+
+            <div class="list-item">
+              <img class="delete-img" src="../images/delete.svg" alt="">
+              <input type="hidden" name="<%=todo.todoItem%>" value="">
+              <% if(todo.isDone==true){ %>
+              <input type="checkbox" name="<%=todo.todoItem%>" value="" checked>
+              <% } else { %>
+              <input type="checkbox" name="<%=todo.todoItem%>" value="">
+              <%  } %>
+              <li><%= todo.todoItem %> </li>
+            </div>
+          </div>
+
+          <%  } %>
+
+        </ul>
+        <div class="input-btn-section">
+          <input class="input-box" type="text" name="newTodo" value="" placeholder="Enter New Task" autocomplete="off" autofocus>
+          <button class="add-btn" type="submit" name="addBtn"><img id="plus-sign" style="border-radius: 15px;" src="../images/plus.png" alt=""></button>
+        </div>
+      </form>
+      </form>
+  </div>
+  </section>
+
+  <footer>
+
+  </footer>
+  <script src="../browser_script.js"></script>
+</body>
+
+</html>
